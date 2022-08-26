@@ -7,8 +7,7 @@ sudo service nginx start
 sudo mkdir -p /data/web_static/
 sudo mkdir -p /data/web_static/releases/test/
 sudo mkdir -p /data/web_static/shared/
-echo "
-<html>
+echo "<html>
   <head>
   </head>
   <body>
