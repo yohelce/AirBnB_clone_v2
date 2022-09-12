@@ -22,7 +22,7 @@ def c_text(text):
     """ Returns string at the /c/<text> route,
     expands the <text> variable"""
     text_add = text.replace('_', ' ')
-    return f'C {text_add}'
+    return 'C {}'.format(text_add)
 
 
 @app.route('/python', strict_slashes=False)
@@ -31,7 +31,7 @@ def python_text(text='is cool'):
     """ Returns a string at the /python route, with a default text
     of 'is cool', or the expansion of <text>"""
     text_add = text.replace('_', ' ')
-    return f'Python {text_add}'
+    return 'Python {}'.format(text_add)
 
 
 if __name__ == '__main__':
