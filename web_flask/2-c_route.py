@@ -22,7 +22,7 @@ def c_text(text):
     """ Returns string at the /c/<text> route,
     expands the <text> variable"""
     text_add = text.replace('_', ' ')
-    return f'C {text_add}'
+    return 'C {}'.format(text_add)
 
 
 if __name__ == '__main__':
