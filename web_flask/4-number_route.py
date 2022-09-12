@@ -22,7 +22,7 @@ def c_text(text):
     """ Returns string at the /c/<text> route,
     expands the <text> variable"""
     text_add = text.replace('_', ' ')
-    return f'C {text_add}'
+    return 'C {}'.format(text_add)
 
 
 @app.route('/python', strict_slashes=False)
@@ -31,14 +31,14 @@ def python_text(text='is cool'):
     """ Returns a string at the /python route, with a default text
     of 'is cool', or the expansion of <text>"""
     text_add = text.replace('_', ' ')
-    return f'Python {text_add}'
+    return 'Python {text_add}'.format(text_add)
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
 def is_a_number(n):
     """ Returns a string at the /number/<n> route only
     if n is a integer"""
-    return f'{n} is a number'
+    return '{} is a number'.format(n)
 
 
 if __name__ == '__main__':
